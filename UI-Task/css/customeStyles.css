@@ -1,0 +1,174 @@
+﻿.logo {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 35px;
+    text-align: center;
+    display: inline-block;
+}
+
+.pull-down {
+    padding-top: 5px
+}
+
+.text-align-right {
+    text-align: right
+}
+
+.sign-out {
+    padding-top: 15px;
+    text-align: left
+}
+
+a[name="listItem"] {
+    color: black;
+}
+
+    a[name="listItem"]:hover {
+        text-decoration: none;
+    }
+
+strong, small, table, input[name="btn-delete"] {
+    font-size: 13px;
+    font-family: Arial;
+}
+
+.custome-row {
+    margin-top: 20px;
+    min-height: 500px;
+}
+
+input[name="btn-delete"] {
+    padding: 2px;
+}
+
+#tblInputs {
+    margin-top: 15px;
+    width: 100%;
+}
+
+    #tblInputs tr td {
+        vertical-align: middle;
+        text-align: right;
+    }
+
+.list-group-item {
+    border: none;
+    border-bottom: 2px solid #808080;
+    text-align: left;
+    border-radius: 0;
+}
+
+    .list-group-item:hover {
+        cursor: pointer;
+    }
+
+.side-bar-links {
+    text-decoration: none;
+    color: black
+}
+
+    .side-bar-links:hover {
+        text-decoration: none;
+    }
+
+.productItem {
+    width: 195px;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.productImg {
+}
+
+    .productImg:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+.groupSeparator {
+    /*border-top: 1px dotted Gray;*/
+    height: 1px;
+    clear: both;
+}
+
+.itemSeparator {
+    height: 180px;
+    width: 1px;
+    /*border-left: 1px dotted Gray;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.side-bar-icons {
+    margin-right: 5px;
+}
+
+    .side-bar-icons:hover {
+        cursor: pointer;
+    }
+
+.page-header {
+    padding-top: 15px;
+}
+
+.hover {
+}
+
+    .hover:hover {
+        cursor: pointer
+    }
+
+#ex4 .p1[data-count]:after {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    content: attr(data-count);
+    font-size: 40%;
+    padding: .2em;
+    border-radius: 50%;
+    line-height: 1em;
+    color: white;
+    background: rgba(255,0,0,.85);
+    text-align: center;
+    min-width: 1em;
+}
+
+
+.select-side-bar-link {
+    color: #495057;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.btn-disabled {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+    .btn-disabled:hover {
+        cursor: not-allowed
+    }
+
+.header-row {
+    background-color: #00b894;
+    color: white;
+    height: 10px;
+}
+
+.grid-style {
+    border: 1px solid #808080
+}
+
+    .grid-style tr {
+        height: 10px;
+    }
+
+.icons-style {
+    list-style: none;
+    text-align: center;
+    padding-top: 5px;
+}

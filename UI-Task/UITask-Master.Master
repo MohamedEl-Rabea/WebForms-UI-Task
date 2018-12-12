@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UITask-Master.master.cs" Inherits="UI_Task.UITask_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/customeStyles.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="js/jQueryV3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a[data-link='" + window.location.pathname + "']").parent().addClass('select-side-bar-link');
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="PlaceHolderScripts" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" name="listItem" data-toggle="tab" href="#home">
+                    <div class="logo">
+                        <b>T</b>
+                    </div>
+                    <b>UI-Task</b>
+                </a>
+            </nav>
+            <div class="page-header">
+                <table class="container" border="0">
+                    <tr class="row">
+                        <td class="col-sm-4 pull-down">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="input-group-text hover" type="submit">
+                                        <i class="fa fa-search "></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control col-12" placeholder="Search " aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                        </td>
+                        <td class="col-sm-7 text-align-right">
+                            <div id="ex4">
+                                <span class="p1 fa-stack fa-2x has-badge" data-count="0">
+                                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/My-Cart.aspx">
+                                        <strong><i class="p3 fa fa-shopping-cart fa-2x fa-stack-1x xfa-inverse"></i></strong>
+                                    </asp:LinkButton>
+                                </span>
+                            </div>
+                        </td>
+                        <td class="col-sm-1 sign-out">
+                            <asp:LinkButton ID="lnkBtnSignOut" runat="server">
+                                        <strong>Sign out</strong>
+                            </asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr />
+            <div class="row custome-row">
+                <div class="col-sm-3">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnHome">
+                            <asp:LinkButton ID="lnkBtnHome" PostBackUrl="~/default.aspx" data-link="/default.aspx" CssClass="side-bar-links" runat="server">
+                                    <strong>Home</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnAccessories">
+                            <asp:LinkButton ID="lnkBtnAccessories" PostBackUrl="~/featured-products.aspx" data-link="/featured-products.aspx" CssClass="side-bar-links" runat="server">
+                                    <strong>Featured</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnFootJeans">
+                            <asp:LinkButton ID="lnkBtnFootJeans" data-link="side-bar" CssClass="side-bar-links" runat="server">
+                                    <strong>Jeans</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnFootwear">
+                            <asp:LinkButton ID="lnkBtnFootwear" data-link="side-bar" CssClass="side-bar-links" runat="server">
+                                    <strong>Footwear</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnShirts">
+                            <asp:LinkButton ID="lnkBtnShirts" data-link="side-bar" CssClass="side-bar-links" runat="server">
+                                    <strong>Shirts</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="list-group-item list-group-item-action" data-link="lnkBtnTShirts">
+                            <asp:LinkButton ID="lnkBtnTShirts" data-link="side-bar" CssClass="side-bar-links" runat="server">
+                                    <strong>T-Shirts</strong>
+                            </asp:LinkButton>
+                        </li>
+                        <li class="icons-style">
+                            <i class="fa fa-facebook-square fa-lg side-bar-icons" title="Follow our products on facebook"></i>
+                            <i class="fa fa-youtube-square fa-lg side-bar-icons" title="Follow our products on youtube"></i>
+                            <i class="fa fa-twitter-square fa-lg side-bar-icons" title="Follow our products on twitter"></i>
+                            <i class="fa fa-snapchat fa-lg side-bar-icons" title="Follow our products on snapchat"></i>
+                            <i class="fa fa-pinterest-square fa-lg side-bar-icons" title="Follow our products on pinterest"></i>
+                            <i class="fa fa-vimeo-square fa-lg side-bar-icons" title="Follow our products on vimeo"></i>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <asp:ContentPlaceHolder ID="PlaceHolderContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Links</h5>
+                    <h6><a href="#">Search</a></h6>
+                    <h6><a href="#">News</a></h6>
+                    <h6><a href="#">Our story</a></h6>
+                    <h6><a href="#">FAQ</a></h6>
+                    <h6><a href="#">Return policy</a></h6>
+                    <h6><a href="#">Contact us</a></h6>
+                </div>
+                <div class="col-sm-6">
+                    <h5>Subscribe</h5>
+                    <br />
+                    <h6>Sign up for the latest news, offers and styles</h6>
+                    <br />
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <input type="text" class="form-control col-12" placeholder="Your mail " aria-label="EMail" aria-describedby="basic-addon1" />
+                            <button class="btn btn-dark" type="submit">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12">
+                    <small>Copyright &copy 2018, UI-Task. Ecommerce Software by M.Rabea</small>
+                </div>
+            </div>
+            <br />
+        </div>
+    </form>
+</body>
+</html>
+
